@@ -1,0 +1,41 @@
+df-messenger {
+    /* Example placement, adjust as required. */
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 608px;
+    height: 468px;
+  
+    --df-messenger-chat-border: 1px solid rgb(244, 244, 244);
+    --df-messenger-chat-border-radius: 20px;
+    --df-messenger-chat-background-color: rgb(255, 255, 255);
+    --df-messenger-chat-padding: 10px 30px;
+  
+    --df-messenger-titlebar-padding: 10px 30px;
+    --df-messenger-titlebar-background-color: rgb(255, 255, 255);
+    --df-messenger-titlebar-border-bottom: 1px solid rgb(244, 244, 244);
+    --df-messenger-titlebar-font-color: rgb(0, 0, 0);
+    --df-messenger-titlebar-title-font-size: 18px;
+    --df-messenger-titlebar-subtitle-font-size: 14px;
+  
+    --df-messenger-message-spacing: 28px;
+    --df-messenger-message-font-family: "Helvetica Neue", "Arial", sans-serif;
+    --df-messenger-message-font-size: 14px;
+    --df-messenger-message-padding: 10px 20px;
+    --df-messenger-message-bot-background-color: rgb(244, 244, 244);
+    --df-messenger-message-bot-font-color: rgb(0, 0, 0);
+    --df-messenger-message-user-background-color: rgb(51, 51, 51);
+    --df-messenger-message-user-font-color: rgb(255, 255, 255);
+    --df-messenger-message-border-radius: 20px;
+    --df-messenger-message-stack-border-top-left-radius: 0;
+    --df-messenger-message-stack-border-bottom-left-radius: 0;
+    --df-messenger-message-stack-spacing: 3px;
+  
+    --df-messenger-send-icon-color: rgb(241, 110, 0);
+    --df-messenger-send-icon-color-hover: rgb(0, 0, 0);
+    --df-messenger-input-background-color: white;
+    --df-messenger-input-font-family: "Helvetica Neue", "Arial", sans-serif;
+    --df-messenger-input-border-top: none;
+    --df-messenger-input-font-color: rgb(0, 0, 0);
+    --df-messenger-input-border-bottom: 1px solid rgb(221, 221, 221);
+  }
