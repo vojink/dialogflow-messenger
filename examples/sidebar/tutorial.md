@@ -11,6 +11,7 @@ firebase login --no-localhost
 ```
 and follow its instructions.
 ## Deployment
+To deploy the code, specify the Project ID and run:
 ```bash
 firebase deploy --only hosting --project <PROJECTID>
 ```
