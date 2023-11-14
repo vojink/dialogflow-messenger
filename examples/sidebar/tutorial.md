@@ -5,7 +5,7 @@ In this tutorial you will learn how to quickly deploy this code.
 <walkthrough-tutorial-duration duration="3"></walkthrough-tutorial-duration>
 
 ## Setup Firebase hosting
-To setup your Firebase service, visit [Firebase console](https://console.firebase.google.com/) and accept _Terms of Service_.
+To setup your Firebase service, visit [Firebase console](https://console.firebase.google.com/?forceCheckTos=true) and accept _Terms of Service_.
 ## Authentication
 To setup Firebase credentials, run the following command:
 ```bash
