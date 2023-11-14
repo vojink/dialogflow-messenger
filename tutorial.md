@@ -7,3 +7,7 @@ To setup Firebase credentials, run the following command:
 ```bash
 firebase login --no-localhost
 ```
+## Deployment
+```bash
+firebase deploy --only hosting --project <PROJECTID>
+```
