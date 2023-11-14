@@ -1,7 +1,7 @@
-# Dialogflow Messenger sidebar tutorial
+# Sidebar chat tutorial
 
 ## Setup Firebase hosting
-To setup your Firebase service, visit https://firebase.corp.google.com/.
+To setup your Firebase service, visit https://console.firebase.google.com/.
 ## Authentication
 To setup Firebase credentials, run the following command:
 ```bash

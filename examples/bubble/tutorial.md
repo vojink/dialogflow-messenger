@@ -1,4 +1,4 @@
-# Dialogflow Messenger tutorial
+# Bubble chat tutorial
 
 ## Setup Firebase hosting
 To setup your Firebase service, visit https://firebase.corp.google.com/.
