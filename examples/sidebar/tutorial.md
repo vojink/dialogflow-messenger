@@ -15,3 +15,7 @@ To deploy the code, specify the Project ID and run:
 ```bash
 firebase deploy --only hosting --project <PROJECTID>
 ```
+It will deploy the new site and provide its URL.
+
+### Redeployment
+You can redeploy as many times as you like.
