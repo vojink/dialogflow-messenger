@@ -4,16 +4,17 @@
 In this tutorial you will learn how to quickly deploy this code.
 <walkthrough-tutorial-duration duration="3"></walkthrough-tutorial-duration>
 
-## Setup Firebase hosting
-To setup your Firebase service, visit [Firebase console](https://console.firebase.google.com/?forceCheckTos=true) and accept _Terms of Service_.
+## Make sure you have a Firebase project
+To host to Firebase, you need a Firebase project.
+Visit [Firebase console](https://console.firebase.google.com/?forceCheckTos=true) and see if you need to create one.
 ## Authentication
 To setup Firebase credentials, run the following command:
 ```bash
-firebase login --no-localhost
+firebase login --no-localhost --reauth
 ```
 and follow its instructions.
 ## Deployment
-To deploy the code at Firebase Hosting, specify the `Project ID` and run:
+To deploy the code at Firebase Hosting, specify the Firebase `Project ID` and run:
 ```bash
 firebase deploy --only hosting --project <PROJECTID>
 ```
