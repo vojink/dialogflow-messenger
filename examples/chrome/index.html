@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+	<title>Vertex AI</title>
+	<style>		
+		body {
+			height: 100%;
+			width: 100%;
+			background-color: #ffffff;
+		}
+
+  	  	df-messenger {
+		    position: absolute;
+		    right: 0;
+			top: 0;
+		    bottom: 0;
+			width: 100%;
+			
+			--df-messenger-default-font-family: "Roboto", sans-serif;
+			--df-messenger-message-font-weight: bold;
+			--df-messenger-titlebar-title-font-weight: normal;
+			--df-messenger-message-font-size: 16px;
+			--df-messenger-message-line-height: 1.2em;
+			
+			--df-messenger-titlebar-background-color: #0A308F;
+			--df-messenger-chat-background-color: #ffffff;
+			--df-messenger-message-bot-background-color: #0A308F;
+			--df-messenger-message-bot-font-color: #ffffff;
+			--df-messenger-message-user-background-color: #D9DCDA;
+			--df-messenger-send-icon-color: #2245B8;
+			--df-messenger-send-icon-color-hover: #BF0098;
+		}
+	</style>
+	<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+</head>
+
+<body>
+	<div id="df-container"></div>
+	<script>
+		// Get the URL parameters:
+        const urlParamLocation = new URLSearchParams(window.location.search).get('location') || 'global';
+		const urlParamAgent = new URLSearchParams(window.location.search).get('agent');
+		const urlParamProject = new URLSearchParams(window.location.search).get('project');
+		const urlParamTitle = new URLSearchParams(window.location.search).get('title') || 'Demo';
+
+        const container = document.getElementById('df-container');
+        if (container && urlParamAgent) {
+			// Instantiate df-messenger.
+            const dfMessenger = document.createElement('df-messenger');
+            // Set the properties.
+            dfMessenger.setAttribute('agent-id', urlParamAgent);
+			dfMessenger.setAttribute('location', urlParamLocation);
+			dfMessenger.setAttribute('project-id', urlParamProject);
+
+			dfMessengerChat = document.createElement('df-messenger-chat');
+			dfMessengerChat.setAttribute('chatTitle', urlParamTitle);
+			dfMessenger.appendChild(dfMessengerChat);
+            // Append the dfMessenger element to the container.
+            container.appendChild(dfMessenger);
+        }
+	</script>
+	<script>
+		document.addEventListener('df-url-suggested', (event) => {
+			// Extract the URLs suggested by the infobot.
+			const suggestedUrl = event.detail.suggestedUrls[0];
+			window.parent.postMessage({
+				'func': 'openUrl',
+				'message': suggestedUrl
+			}, "*");
+		});
+	</script>
+</body>
+
+</html>
