@@ -1,8 +1,5 @@
 /*
- * Listen to the `df-response-received` event that is emitted whenever 
- * Dialogflow Messenger receives a response from the backend. 
- * Adjust the incoming rich element message to your needs.
- * This code removes the `subtitle` entry of an "info" element.
+ * Demo backend.
  * For more info on response types, see https://cloud.google.com/dialogflow/cx/docs/concept/integration/dialogflow-messenger#fulfillment
  */
 window.addEventListener('df-messenger-loaded', (event) => {
@@ -16,16 +13,21 @@ window.addEventListener('df-messenger-loaded', (event) => {
           parsedRequest?.queryInput?.event?.event;
         responseMap = {
           "button": {
-                  "type": "button",
-                  "icon": {
-                    "type": "chevron_right",
-                    "color": "#FF9800"
-                  },
-                  "text": "Button example",
-                  "anchor": {
-                    "href": "https://example.com"
-                  },
-                }
+            "type": "button",
+            "icon": {
+              "type": "chevron_right",
+              "color": "#FF9800"
+            },
+            "text": "Button example",
+            "anchor": {
+              "href": "https://example.com"
+            },
+          },
+          "image": {
+            "type": "image",
+            "rawUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/242px-Python-logo-notext.svg.png",
+            "accessibilityText": "Example logo"
+          }
         };
         const response = JSON.stringify({
           queryResult: {
